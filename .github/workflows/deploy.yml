@@ -1,5 +1,4 @@
-name: Deploy AI Detector
-
+name: Deploy Resume gpt
 on: [push]  # Runs this workflow on every push
 
 jobs:
@@ -21,5 +20,5 @@ jobs:
         run: |
           echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" > .env
 
-      - name: Run AI Detector
-        run: python Detector.py
+      - name: Run Resume gpt
+        run: python app.py
